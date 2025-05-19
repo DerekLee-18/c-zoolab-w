@@ -6,7 +6,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DerekLee-18/c-zoolab-w.git"
-    },
+  },
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/types/index.esm.d.ts",
@@ -32,6 +32,7 @@
     "jest-fetch-mock": "^3.0.3",
     "nise": "^4.0.4",
     "prettier": "^2.2.1",
+    "rimraf": "^6.0.1",
     "rollup": "^2.36.2",
     "rollup-plugin-filesize": "^9.1.0",
     "rollup-plugin-license": "^2.2.0",
@@ -43,7 +44,7 @@
     "test": "jest",
     "lint-test": "eslint -c .eslintrc src",
     "lint-fix": "eslint --fix --ext .tsx,.ts .",
-    "build": "rm -rf dist && rollup -c",
+    "build": "rimraf dist && rollup -c",
     "prepublishOnly": "rollup -c",
     "semantic-release": "semantic-release",
     "prettier": "prettier -w src",
@@ -64,6 +65,5 @@
     "testURL": "https://test.com/url#tag",
     "collectCoverage": true,
     "testEnvironment": "<rootDir>/../jest-jsdom-env"
-  },
-  "dependencies": {}
+  }
 }
